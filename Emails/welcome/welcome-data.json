@@ -1,3 +1,5 @@
 {
-    "marketplaceUrl": "a url"
+    "marketplace": {
+        "url": "https://carevine.us"
+    }
 }
