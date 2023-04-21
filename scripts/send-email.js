@@ -17,12 +17,15 @@ function main() {
 
   const template = Handlebars.compile(html);
   const htmlToSend = template(data);
+  
+  const compiledSubject = Handlebars.compile(subject)
+  const subjectToSend = compiledSubject(data)
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to, // Change to your recipient
     from: 'support@carevine.us', // Change to your verified sender
-    subject,
+    subject: subjectToSend,
     html: htmlToSend,
   };
   sgMail

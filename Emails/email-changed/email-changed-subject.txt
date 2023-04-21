@@ -1,1 +1,1 @@
-Your Email Has Changed
+{{marketplace.name}} Email Address Changed
